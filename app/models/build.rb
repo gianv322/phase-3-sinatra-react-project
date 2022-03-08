@@ -3,4 +3,7 @@ class Build < ActiveRecord::Base
     has_many :lists
     has_many :parts, through: :lists
 
+
+    
+
 end
