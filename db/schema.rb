@@ -10,30 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_08_144034) do
+ActiveRecord::Schema.define(version: 2022_03_08_144002) do
 
   create_table "builds", force: :cascade do |t|
-    t.integer "user_id"
     t.string "name"
+    t.integer "total_price"
+    t.integer "case"
+    t.integer "cpu"
+    t.integer "gpu"
+    t.integer "memory"
+    t.integer "storage"
+    t.integer "power_supply"
+    t.integer "motherboard"
+    t.integer "cpu_cooler"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "lists", force: :cascade do |t|
-    t.integer "build_id"
-    t.integer "part_id"
-    t.string "name"
   end
 
   create_table "parts", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.string "category"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
+    t.integer "build_id"
   end
 
 end

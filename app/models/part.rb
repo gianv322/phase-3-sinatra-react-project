@@ -1,5 +1,3 @@
 class Part < ActiveRecord::Base
-    has_many :lists
-    has_many :builds, through: :lists
-
+    belongs_to :build
 end

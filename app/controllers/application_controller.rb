@@ -14,12 +14,4 @@ class ApplicationController < Sinatra::Base
     builds = Build.all
     builds.to_json
   end
-  get "/lists" do
-    lists = List.all
-    lists.to_json
-  end
-  get "/users" do
-    users = User.all
-    users.to_json
-  end
 end

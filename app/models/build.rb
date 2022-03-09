@@ -1,9 +1,7 @@
 class Build < ActiveRecord::Base
-    belongs_to :user
-    has_many :lists
-    has_many :parts, through: :lists
+    has_many :parts
 
-
-    
-
+    def total_price
+      parts.sum(:price)
+    end
 end
