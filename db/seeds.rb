@@ -7,18 +7,9 @@ puts "🌱 Seeding spices..."
 
 # Builds
 name = ["Awesome", "Crazy", "Fun", "Affordable"]
-part_name = ["Big 100", "Small 5000", "Shiny Part", "Newest Part", "Heavy Part"]
+part = ["Big 100", "Small 5000", "Shiny Part", "Newest Part", "Heavy Part"]
 10.times do 
-    Build.create(name: "#{name.sample} Build", 
-    total_price: rand(200..500),
-    case: part_name.sample,
-    cpu: part_name.sample,
-    gpu: part_name.sample,
-    memory: part_name.sample,
-    storage: part_name.sample,
-    power_supply: part_name.sample,
-    motherboard: part_name.sample,
-    cpu_cooler: part_name.sample)
+    Build.create(name: "#{name.sample} Build", total_price: rand(200..500), case: part.sample, cpu: part.sample, gpu: part.sample, motherboard: part.sample)
 end
 
 # Parts (by Category)
