@@ -14,4 +14,14 @@ class ApplicationController < Sinatra::Base
     builds = Build.all
     builds.to_json
   end
+  post "/builds" do
+    build = Build.create(
+      name: params[:name],
+      cpu: params[:cpu],
+      price: params[:price],
+      gpu: params[:gpu],
+      chassis: params[:chassis],
+      
+    )
+  end
 end

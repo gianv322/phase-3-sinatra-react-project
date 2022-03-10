@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2022_03_08_144002) do
   create_table "builds", force: :cascade do |t|
     t.string "name"
     t.integer "total_price"
-    t.string "chassis"
+    t.string "case"
     t.string "cpu"
     t.string "gpu"
     t.string "motherboard"
