@@ -8,7 +8,7 @@ puts "🌱 Seeding spices..."
 # Builds
 name = ["Awesome", "Crazy", "Fun", "Affordable"]
 part = ["Big 100", "Small 5000", "Shiny Part", "Newest Part", "Heavy Part"]
-10.times do 
+5.times do 
     Build.create(name: "#{name.sample} Build", total_price: rand(200..500), chassis: part.sample, cpu: part.sample, gpu: part.sample, motherboard: part.sample)
 end
 

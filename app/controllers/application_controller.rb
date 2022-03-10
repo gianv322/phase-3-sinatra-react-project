@@ -19,13 +19,11 @@ class ApplicationController < Sinatra::Base
 
   post "/builds" do
     build = Build.create(
-      name: params[:name]
-      total_price: params[:total_price]
-      chassis: params[:chassis]
-      cpu: params[:cpu]
-      gpu: params[:gpu]
-      motherboard: params[:motherboard]
-    )
+      name: params[:name],
+      cpu: params[:cpu],
+      gpu: params[:gpu],
+      motherboard: params[:motherboard],
+      chassis: params[:chassis])
     build.to_json
   end
 
