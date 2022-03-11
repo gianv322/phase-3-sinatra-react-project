@@ -1,7 +1,5 @@
 class Build < ActiveRecord::Base
-    has_many :parts
-
-    def total_price
-      parts.sum(:price)
-    end
+    has_many :build_components
+    has_many :components, through: :build_components
+    
 end
